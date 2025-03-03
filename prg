@@ -291,7 +291,7 @@ body{font-family:Arial,sans-serif;padding:20px}
 
 
 
-9.B.
+9.B. Java script objects
 <!DOCTYPE html>
 <html>
 <head>
