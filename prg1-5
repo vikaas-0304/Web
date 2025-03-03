@@ -1,0 +1,132 @@
+1.A.
+<!DOCTYPE html>
+<html>
+<head>
+<title>SRCAS</title>
+</head>
+<body style="background-color: AZURE">
+<center><h1>Sri Ramakrishna College of Arts and Science</h1></center>
+<center><h2>Coimbatore-641006</h2></center>
+<center>
+<table border="2">
+<caption><b>PROGRAMMES AVAILABLE</b></caption>
+<thead>
+<th>Under Graduates</th>
+<th>Post Graduates</th>
+</thead>
+<tr>
+<td>BSC COMPUTER SCIENCE</td>
+<td>MSC COMPUTER SCIENCE</td>
+<td><img src="srcas.JPG" width="150" height="150"/></td>
+</tr>
+<tr>
+<td>BSC INFORMATION TECHNOLOGY</td>
+<td>MSC INFORMATION TECHNOLOGY</td>
+</tr>
+<tr>
+<td>BCOM</td>
+<td>MCOM</td>
+</tr>
+<tr>
+<td>BA ENGLISH LITERATURE</td>
+<td>MA ENGLISH LITERATURE</td>
+</tr>
+<tr>
+<th rowspan="2">PG DIPLOMA</th>
+<td>PGDCA</td>
+</tr>
+<tr>
+<td>PGDAC</td>
+</tr>
+<tr>
+<td colspan="2">ALL PROGRAMMES AFFILIATED TO BHARATHIAR UNIVERSITY</td>
+</tr>
+</table>
+</center>
+<h4>LINKS</h4>
+<ol>
+<li><a href="home.html">Home Page</a></li>
+<li><a href="fee.html">Fees Details</a></li>
+<li><a href="lib.html">Library</a></li>
+</ol>
+</body>
+</html>
+
+
+1.B
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+border:1px solid black;
+}
+</style>
+<body>
+<h2>II BSc-IT-S2 TIME TABLE</h2>
+<table style="width:200PX">
+<tr>
+<th>DAY ORDER</th>
+<th>I-Hr(1.15pm-2.05pm)</th>
+<th>II-Hr(2.05pm-2.55pm)</th>
+<th>BREAK(2.55pm-3.10pm)</th>
+<th>III-Hr(3.10pm-4.00pm)</th>
+<th>IV-Hr(4.00pm-4.50pm)</th>
+<th>V-Hr(4.50pm-5.40pm)</th>
+</tr>
+<tr>
+<td>I DAY</td>
+<td>WEB</td>
+<td>BC</td>
+<td> </td>
+<td>POWER BI</td>
+<td>ACC</td>
+<td>CN</td>
+</tr>
+<tr>
+<td>II DAY</td>
+<td>CN</td>
+<td>BC</td>
+<td> </td>
+<td>ACC</td>
+<td>POWER BI</td>
+<td>AI</td>
+</tr>
+<tr>
+<td>III DAY</td>
+<td>ACC</td>
+<td>AI</td>
+<td> </td>
+<td>WEB LAB</td>
+<td>WEB LAB</td>
+<td>WEB LAB</td>
+</tr>
+<tr>
+<td>IV DAY</td>
+<td>BC</td>
+<td>WEB</td>
+<td> </td>
+<td>ACC</td>
+<td>AI</td>
+<td>POWER BI</td>
+</tr>
+<tr>
+<td>V DAY</td>
+<td>WEB</td>
+<td>CN</td>
+<td> </td>
+<td>BC</td>
+<td>AI</td>
+<td>ACC</td>
+</tr>
+<tr>
+<td>VI DAY</td>
+<td>CN</td>
+<td>WEB</td>
+<td> </td>
+<td>POWER BI LAB</td>
+<td>POWER BI LAB</td>
+<td>POWER BI LAB</td>
+</tr>
+</table>
+</body>
+</html>
