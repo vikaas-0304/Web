@@ -4,10 +4,10 @@
 <head>
 <title>SRCAS</title>
 </head>
-<body style="background-color: AZURE">
-<center><h1>Sri Ramakrishna College of Arts and Science</h1></center>
-<center><h2>Coimbatore-641006</h2></center>
+<body>
 <center>
+<h1>Sri Ramakrishna College of Arts and Science</h1>
+<h2>Coimbatore-641006</h2>
 <table border="2">
 <caption><b>PROGRAMMES AVAILABLE</b></caption>
 <thead>
@@ -43,32 +43,25 @@
 </tr>
 </table>
 </center>
-<h4>LINKS</h4>
-<ol>
-<li><a href="home.html">Home Page</a></li>
-<li><a href="fee.html">Fees Details</a></li>
-<li><a href="lib.html">Library</a></li>
-</ol>
 </body>
 </html>
-
 
 1.B. Timetable
 <!DOCTYPE html>
 <html>
 <style>
 table, th, td {
-border:1px solid black;
+    border: 1px solid black;
+    text-align: center;
 }
 </style>
 <body>
 <h2>II BSc-IT-S2 TIME TABLE</h2>
-<table style="width:200PX">
+<table style="width: 100%; height: 500px;">
 <tr>
 <th>DAY ORDER</th>
 <th>I-Hr(1.15pm-2.05pm)</th>
 <th>II-Hr(2.05pm-2.55pm)</th>
-<th>BREAK(2.55pm-3.10pm)</th>
 <th>III-Hr(3.10pm-4.00pm)</th>
 <th>IV-Hr(4.00pm-4.50pm)</th>
 <th>V-Hr(4.50pm-5.40pm)</th>
@@ -77,7 +70,6 @@ border:1px solid black;
 <td>I DAY</td>
 <td>WEB</td>
 <td>BC</td>
-<td> </td>
 <td>POWER BI</td>
 <td>ACC</td>
 <td>CN</td>
@@ -86,7 +78,6 @@ border:1px solid black;
 <td>II DAY</td>
 <td>CN</td>
 <td>BC</td>
-<td> </td>
 <td>ACC</td>
 <td>POWER BI</td>
 <td>AI</td>
@@ -95,16 +86,12 @@ border:1px solid black;
 <td>III DAY</td>
 <td>ACC</td>
 <td>AI</td>
-<td> </td>
-<td>WEB LAB</td>
-<td>WEB LAB</td>
-<td>WEB LAB</td>
+<td colspan="3">WEB LAB</td>
 </tr>
 <tr>
 <td>IV DAY</td>
 <td>BC</td>
 <td>WEB</td>
-<td> </td>
 <td>ACC</td>
 <td>AI</td>
 <td>POWER BI</td>
@@ -113,7 +100,6 @@ border:1px solid black;
 <td>V DAY</td>
 <td>WEB</td>
 <td>CN</td>
-<td> </td>
 <td>BC</td>
 <td>AI</td>
 <td>ACC</td>
@@ -122,10 +108,7 @@ border:1px solid black;
 <td>VI DAY</td>
 <td>CN</td>
 <td>WEB</td>
-<td> </td>
-<td>POWER BI LAB</td>
-<td>POWER BI LAB</td>
-<td>POWER BI LAB</td>
+<td colspan="3">POWER BI LAB</td>
 </tr>
 </table>
 </body>
@@ -134,7 +117,6 @@ border:1px solid black;
 
 
 2. Linking
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -207,6 +189,7 @@ text-decoration: underline;}
 </html>
 
 
+
 3. Video & audio
 <!DOCTYPE html>
 <html>
@@ -216,17 +199,14 @@ text-decoration: underline;}
 <body>
 <h1>Embedding Video and Audio</h1>
 <h2>Video Example</h2>
-<video width="640" height="360" controls>
-<source src="file_example_MP4_480_1_5MG.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<video width="500" height="300" controls><source src="video1.mp4" type="video/mp4"></video>
+<br>
+<br>
 <h2>Audio Example</h2>
-<audio controls>
-<source src="file_example_MP3_700KB.mp3" type="audio/mpeg">
-Your browser does not support the audio tag.
-</audio>
+<audio controls><source src="file_example_MP3_700KB.mp3" type="audio/mpeg"></audio>
 </body>
 </html>
+
 
 
 4. A. canvas
@@ -236,46 +216,61 @@ Your browser does not support the audio tag.
 <title>Canvas Gradient</title>
 </head>
 <body>
-<canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3;"></canvas>
-<style>
-body {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
-background-color: #f0f0f0;
-}
-</style>
+<br>
+<br>
+<center>
+<canvas id="myCanvas" width="1000" height="700"></canvas>
+</center>
 <script>
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-var grd = ctx.createLinearGradient(0, 0, 170, 0);
-grd.addColorStop(0, "black");
-grd.addColorStop(0.3, "magenta");
-grd.addColorStop(0.5, "blue");
-grd.addColorStop(0.6, "green");
-grd.addColorStop(0.8, "yellow");
-grd.addColorStop(1, "red");
+var grd = ctx.createLinearGradient(0, 0, c.width, 0);
+grd.addColorStop(0, "white");
+grd.addColorStop(0.1, "magenta");
+grd.addColorStop(0.2, "blue");
+grd.addColorStop(0.3, "green");
+grd.addColorStop(0.4, "yellow");
+grd.addColorStop(0.5, "red");
+grd.addColorStop(0.6, "pink");
+grd.addColorStop(0.7, "violet");
+grd.addColorStop(0.8, "black");
+grd.addColorStop(0.9, "orange");
+grd.addColorStop(1, "white");
 ctx.fillStyle = grd;
-ctx.fillRect(20, 20, 150, 100);
+ctx.fillRect(0, 0, c.width, c.height);
 </script>
 </body>
 </html>
+
+
 
 
 4.B. Circle
 <!DOCTYPE html>
 <html>
 <head>
-<title>Canvas Circle</title>
+<title>Canvas Circle Animation</title>
 </head>
 <body>
 <canvas id="c" width="200" height="200"></canvas>
+<br>
+<button onclick="startDrawing()">Start</button>
 <script>
 let ctx = document.getElementById("c").getContext("2d");
-ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-ctx.fill();
+let radius = 0; 
+let interval;
+function startDrawing() {
+clearInterval(interval); 
+radius = 0; 
+interval = setInterval(drawCircle, 30);  }
+function drawCircle() {
+ctx.clearRect(0, 0, 200, 200); 
+ctx.beginPath();
+ctx.arc(100, 100, radius, 0, 2 * Math.PI);
+ctx.stroke(); 
+radius += 2; 
+if (radius > 50) {
+clearInterval(interval);  }}
 </script>
 </body>
 </html>
@@ -298,6 +293,7 @@ ctx.fillText("Hello, Canvas!", 50, 100);
 </script>
 </body>
 </html>
+
 
 
 4.D. free Handwriting canvas
