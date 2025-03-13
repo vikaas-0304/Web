@@ -48,12 +48,11 @@
 
 
 
-
 1.B. Timetable
 <!DOCTYPE html>
 <html>
 <style>
-table, th, td {
+body, table, th, td {
     border: 1px solid black;
     text-align: center;
 }
@@ -123,13 +122,13 @@ table, th, td {
 <!DOCTYPE html>
 <html>
 <head>
-<title>internal and external links</title>
+<title>Internal and External Links</title>
 <style>
 body{
 font-family: Arial;
 line-height: 1.5;
 padding:21px;
-background-color: azure;}
+background-color: rgb(59, 233, 233);}
 h2{
 color: blue;}
 nav{
@@ -145,49 +144,60 @@ text-decoration: underline;}
 <body>
 <h2>INTERNAL LINK</h2>
 <nav>
-<a href="#colors">colors</a>
-<a href="#fruits">fruits</a>
-<a href="#vegetables">vegetables</a>
-<a href="#drinks">drinks</a>
+<a href="#colors">Colors</a>
+<a href="#fruits">Fruits</a>
+<a href="#vegetables">Vegetables</a>
+<a href="#drinks">Drinks</a>
+<a href="#extern">External Links</a>
 </nav>
 <section id="colors">
-<h2>list of color</h2>
+<h2>List of Colors</h2>
 <ol>
-<li>red</li>
-<li>blue</li>
-<li>green</li>
-<li>orange</li>
+<li>Red</li>
+<li>Blue</li>
+<li>Green</li>
+<li>Orange</li>
+<li>Black</li>
+<li>White</li>
 </ol>
 </section>
 <section id="fruits">
-<h2>list of fruits</h2>
+<h2>List of Fruits</h2>
 <ol>
-<li>apple</li>
-<li>grape</li>
-<li>orange</li>
-<li>lemon</li>
+<li>Apple</li>
+<li>Grape</li>
+<li>Orange</li>
+<li>Lemon</li>
+<li>Papaya</li>
+<li>Guava</li>
 </ol>
 </section>
 <section id="vegetables">
-<h2>list of vegetables</h2>
+<h2>List of Vegetables</h2>
 <ol>
-<li>carrot</li>
-<li>beans</li>
-<li>potato</li>
-<li>spinach</li>
+<li>Carrot</li>
+<li>Beans</li>
+<li>Potato</li>
+<li>Spinach</li>
+<li>Tomato</li>
+<li>Brinjal</li>
 </ol>
 </section>
 <section id="drinks">
-<h2>list of drinks</h2>
+<h2>List of Drinks</h2>
 <ol>
-<li>tea</li>
-<li>coffee</li>
-<li>lemon juice</li>
-<li>lassi</li>
+<li>Tea</li>
+<li>Coffee</li>
+<li>Lemon Juice</li>
+<li>Lassi</li>
+<li>Badam Milk</li>
+<li>Chocolate Milkshake</li>
 </ol>
 </section>
+<section id="extern">
 <h2>EXTERNAL LINKS</h2>
-<p><a href="https://www.google.com/">GOOGLE</a></p>
+<p><a href="https://www.srcas.ac.in/" target="_blank">SRCAS</a></p>
+</section>
 </body>
 </html>
 
@@ -203,14 +213,15 @@ text-decoration: underline;}
 <body>
 <h1>Embedding Video and Audio</h1>
 <h2>Video Example</h2>
-<video width="500" height="300" controls><source src="video1.mp4" type="video/mp4"></video>
+<img src="video.gif" alt="Animated GIF">
+<br>
+<video width="500" height="300" controls><source src="video.gif" type="gif"></video>
 <br>
 <br>
 <h2>Audio Example</h2>
 <audio controls><source src="file_example_MP3_700KB.mp3" type="audio/mpeg"></audio>
 </body>
 </html>
-
 
 
 
@@ -287,22 +298,26 @@ clearInterval(interval);  }}
 <!DOCTYPE html>
 <html>
 <head>
-<title>Canvas Text Example</title>
+<title>Canvas Text Animation</title>
 </head>
 <body>
 <canvas id="myCanvas" width="400" height="200" style="border:1px solid black;"></canvas>
 <script>
-let canvas = document.getElementById("myCanvas");
-let ctx = canvas.getContext("2d");
+let ctx = document.getElementById("myCanvas").getContext("2d"), text = "Hello, Canvas!", i = 0;
 ctx.font = "30px Arial";
-ctx.fillText("Hello, Canvas!", 50, 100);
+
+(function draw() {
+    ctx.clearRect(0, 0, 400, 200);
+    ctx.fillText(text.slice(0, ++i), 50, 100);
+    if (i <= text.length) setTimeout(draw, 200);
+})();
 </script>
 </body>
 </html>
 
 
 
-4.D. free Handwriting canvas
+4.D. Free Handwriting Canvas
 <!DOCTYPE html>
 <html>
 <head>
@@ -310,7 +325,7 @@ ctx.fillText("Hello, Canvas!", 50, 100);
 </head>
 <body>
 <h2>Draw on the Canvas</h2>
-<canvas id="c" width="500" height="300" style="border:1px solid"></canvas>
+<canvas id="c" width="1000" height="600" style="border:1px solid"></canvas>
 <script>
 let canvas = document.getElementById("c"), ctx = canvas.getContext("2d"), drawing = false;
 canvas.onmousedown = () => drawing = true;
@@ -326,6 +341,7 @@ ctx.beginPath();
 ctx.moveTo(e.offsetX, e.offsetY);
 };
 </script>
+<button onclick="location.reload()">Reset</button>
 </body>
 </html>
 
@@ -334,33 +350,62 @@ ctx.moveTo(e.offsetX, e.offsetY);
 
 5.Clg site
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sri Ramakrishna</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Ramakrishna College</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }    
+    body { background: #fcf7f7; color: #333; text-align: center; }
+    header, footer { background: #0056b3; color: white; padding: 15px 0; }
+    nav ul { list-style: none; display: flex; justify-content: center; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: bold; padding: 8px 12px; transition: 0.3s; }
+    nav ul li a:hover { background: white; color: #0056b3; border-radius: 5px; }
+    .hero, .content { padding: 50px 20px; }
+    .content { margin: 50px auto; max-width: 800px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+    .logo-container img { width: 500px; height: auto; padding: 20px 0; }
+    footer { margin-top: 50px; padding: 20px; }
+    </style>
 </head>
 <body>
+<div class="logo-container">
+<img src="logo.png" alt="Sri Ramakrishna College Logo">
+</div>
 <header>
-<div>Sri Ramakrishna college of Arts & Science</div>
 <nav>
-<a href="#about us">about-us</a>
-<a href="courses">courses</a>
-<a href="contact">contact</a>
+<ul>
+<li><a href="Prg5.html">Home</a></li>
+<li><a href="#aboutus">About</a></li>
+<li><a href="#contacts">Contact</a></li>
+<li><a href="https://www.srcas.ac.in/alumni-association/" target="_blank">Alumni</a></li>
+<li><a href="https://www.srcas.ac.in/departments/" target="_blank">Departments</a></li>
+</ul>
 </nav>
 </header>
-<section class="sec">
-<h2>About us</h2>
-<p>Venkatesalu of the SNR Sons Charitable Trust. The college is situated at the heart of the Coimbatore city and has a beautiful scenic campus sprawling over an area of 16 acres with numerous imposing buildings. The college is autonomous (since 2004) in its third cycle and affiliated to Bharathiar University since 1987.</p>
-<hr>
+<section class="hero">
+<h1>Welcome to Sri Ramakrishna College of Arts & Science</h1>
+<p>Empowering students through quality education and innovation.</p>
 </section>
-<section class="sec">
-<h3>Explore the variety of courses</h3>
-<p><a href="courses" class="b"></a><a href="https://www.srcas.ac.in/ug-programmes" target="_top">click me</a></p>
+<section class="content" id="aboutus">
+<h2>About Us</h2>
+<p>Sri Ramakrishna College of Arts & Science is a premier educational institution, offering a diverse range of undergraduate and postgraduate programs. We focus on academic excellence, innovation, and all-round development of students.</p>
+<p>Established in Coimbatore, we provide world-class education and foster a dynamic learning environment.</p>
 </section>
-<section class="sec">
-<h3> Contact </h3>
-<a href="contact" class="c"></a>
+<footer>
+<section id="contacts">
+<h3>Contact Us</h3>
+<br><br>
+<p>Address: Sri Ramakrishna College of Arts & Science, Nava India, Peelamedu, Coimbatore, India</p>
+<br>
+<p>Email: office@srcas.ac.in</p>
+<br>
+<p>Phone: +91-422-2562788</p>
+<br><br><br>
+<p>Copyright &copy;2025 Sri Ramakrishna College of Arts & Science. All Rights Reserved &emsp;&emsp;&emsp; Developed & Maintained By: Web Team of Sri Ramakrishna College of Arts & Science</p>
 </section>
+</footer>
 </body>
 </html>
 
@@ -376,9 +421,9 @@ ctx.moveTo(e.offsetX, e.offsetY);
 <button type="button" onclick="toggleContent()">Click Me: change HTML content!</button>
 <p>JavaScript can change HTML attribute values.</p>
 <p>JavaScript changes the value of the src (source) attribute of an image.</p>
-<img id="myImage" src="pic_bulboff.gif" style="width:100px">
-<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
-<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+<img id="myImage" src="pic1.png" style="width:100px">
+<button onclick="document.getElementById('myImage').src='pic2.png'">Turn on the light</button>
+<button onclick="document.getElementById('myImage').src='pic3.png'">Turn off the light</button>
 <button type="button" onclick="toggleStyle()">Click Me: change the style!</button>
 <button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me: hide HTML elements!</button>
 <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me: show hidden elements!</button>
@@ -398,25 +443,33 @@ function toggleContent() {
 
 
 
-
 6.B. If Else Ladder
 <!DOCTYPE html>
 <html>
 <head>
-<title>If-Else Ladder Example</title>
+<title>If-Else Ladder - Grade System</title>
 </head>
 <body>
-<h2>If-Else Ladder in JavaScript</h2>
-<p>Check the console for output.</p>
+<h2>Grade Evaluation in JavaScript</h2>
+<label for="marks">Enter your marks: </label><input type="number" id="marks"><button onclick="checkGrade()">Check Grade</button>
+<h3 id="result"></h3>
 <script>
-let num = Number(prompt("Enter a number:"));
-if (isNaN(num)) console.log("Invalid input! Please enter a number.");
-else if (num > 100) console.log("The number is greater than 100.");
-else if (num > 50) console.log("The number is between 51 and 100.");
-else if (num > 0) console.log("The number is between 1 and 50.");
-else if (num === 0) console.log("The number is zero.");
-else console.log("The number is negative.");
+function checkGrade() {
+let marks = Number(document.getElementById("marks").value);
+let resultText = "";
+if (isNaN(marks) || marks < 0 || marks > 100) resultText = "Invalid input! Please enter marks between 0 and 100.";
+else if (marks >= 90) resultText = "Grade: A (Excellent)";
+else if (marks >= 80) resultText = "Grade: B (Very Good)";
+else if (marks >= 70) resultText = "Grade: C (Good)";
+else if (marks >= 60) resultText = "Grade: D (Satisfactory)";
+else if (marks >= 50) resultText = "Grade: E (Needs Improvement)";
+else resultText = "Grade: F (Fail)";
+document.getElementById("result").textContent = resultText;
+console.log(resultText);
+}
 </script>
+
+<h3>Also check console to see output.</h3>
 </body>
 </html>
 
@@ -446,6 +499,7 @@ function handleSubmit(event){event.preventDefault();document.querySelectorAll('.
 </script>
 </body>
 </html>
+
 
 
 
@@ -512,36 +566,28 @@ button { cursor: pointer; }
 </div>
 <script>
 let display = document.getElementById('display');
-
 function appendToDisplay(value) {
-    display.value += value;
-}
-
+display.value += value;}
 function clearDisplay() {
-    display.value = '';
-}
-
+display.value = ''; }
 function calculateResult() {
-    try {
-        display.value = eval(display.value);
-    } catch (e) {
-        display.value = 'Error';
-    }
-}
-
+try {
+display.value = eval(display.value);
+} catch (e) {
+display.value = 'Error';
+}}
 document.addEventListener('keydown', function(e) {
-    if (e.key >= 0 && e.key <= 9) {
-        appendToDisplay(e.key);
-    } else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
-        appendToDisplay(e.key);
-    } else if (e.key === 'Enter') {
-        calculateResult();
-    } else if (e.key === 'Backspace') {
-        display.value = display.value.slice(0, -1);
-    } else if (e.key === 'Escape') {
-        clearDisplay();
-    }
-});
+if (e.key >= 0 && e.key <= 9) {
+appendToDisplay(e.key);
+} else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
+appendToDisplay(e.key);
+} else if (e.key === 'Enter') {
+calculateResult();
+} else if (e.key === 'Backspace') {
+display.value = display.value.slice(0, -1);
+} else if (e.key === 'Escape') {
+clearDisplay();
+} } );
 </script>
 </body>
 </html>
@@ -606,8 +652,8 @@ document.addEventListener("keypress", function(event) {
 <head>
 <title>Positioning Examples</title>
 <style>
-body{font-family:Arial,sans-serif;padding:20px}
-.static,.relative{width:200px;height:100px;margin-bottom:20px}
+body{font-family:Arial,sans-serif;padding:80px}
+.static,.relative{width:600px;height:300px;margin-bottom:60px}
 .static{background-color:lightblue}
 .relative{background-color:lightgreen;position:relative;top:30px;left:50px}
 </style>
@@ -677,21 +723,21 @@ body{font-family:Arial,sans-serif;padding:20px}
 <h1>JavaScript String, Function, and Math Object Demonstrations</h1>
 <h2>String Object Demonstration</h2>
 <script>
-let str = "Hello, World!";
-let str2 = " How are you?";
+let str = "Oh! Hi Buddy!";
+let str2 = " How are you doing?";
 document.write("<p>Original String: " + str + "</p>");
 document.write("<p>Lowercase: " + str.toLowerCase() + "</p>");
 document.write("<p>Uppercase: " + str.toUpperCase() + "</p>");
 document.write("<p>Index of 'World': " + str.indexOf("World") + "</p>");
 document.write("<p>Last index of 'o': " + str.lastIndexOf("o") + "</p>");
 document.write("<p>Concatenated String: " + str.concat(str2) + "</p>");
-document.write("<p>Does the string include 'Hello'? " + str.includes("Hello") + "</p>");
+document.write("<p>Does the string include 'Hi'? " + str.includes("Hello") + "</p>");
 </script>
+<br>
 <h2>Function Demonstration</h2>
 <p id="output"></p>
 <button onclick="showDate()">Show Date</button>
 <button onclick="showTime()">Show Time</button>
-<button onclick="add(5, 10)">Add 5 + 10</button>
 <button onclick="greet('John')">Greet</button>
 <button onclick="randomNumber()">Random Number</button>
 <script>
@@ -701,9 +747,7 @@ function showDate() {
 function showTime() {
   document.getElementById("output").innerText = new Date().toLocaleTimeString();
 }
-function add(a, b) {
-  document.getElementById("output").innerText = "Sum: " + (a + b);
-}
+
 function greet(name) {
   document.getElementById("output").innerText = "Hello, " + name + "!";
 }
@@ -711,6 +755,8 @@ function randomNumber() {
   document.getElementById("output").innerText = "Random: " + Math.floor(Math.random() * 100);
 }
 </script>
+<br>
+<br>
 <h2>Math Object Demonstration</h2>
 <script>
 document.write("<p>Math.round(4.7): " + Math.round(4.7) + "</p>");
