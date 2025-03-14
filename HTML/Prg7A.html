@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DNA to RNA Conversion</title>
+</head>
+<body>
+<h1>DNA to RNA Conversion</h1>
+<script>
+s = prompt("Enter DNA sequence (A, T, C, G):", ""); 
+o = s.split(""); 
+document.write("The given sequence: " + s + "<br><br>"); 
+for (i = 0; i < s.length; i++) {
+    o[i] = {'A': 'U', 'T': 'A', 'C': 'G', 'G': 'C', 
+            'a': 'u', 't': 'a', 'c': 'g', 'g': 'c'}[s[i]] || s[i];
+} 
+document.write("DNA to RNA Conversion: " + o.join(""));
+</script>
+</body>
+</html>

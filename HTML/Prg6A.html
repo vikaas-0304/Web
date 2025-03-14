@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>What Can JavaScript Do?</h2>
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick="toggleContent()">Click Me: change HTML content!</button>
+<p>JavaScript can change HTML attribute values.</p>
+<p>JavaScript changes the value of the src (source) attribute of an image.</p>
+<img id="myImage" src="pic1.png" style="width:100px">
+<button onclick="document.getElementById('myImage').src='pic2.png'">Turn on the light</button>
+<button onclick="document.getElementById('myImage').src='pic3.png'">Turn off the light</button>
+<button type="button" onclick="toggleStyle()">Click Me: change the style!</button>
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me: hide HTML elements!</button>
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me: show hidden elements!</button>
+<script>
+let isBig = false, isHello = false;
+function toggleStyle() {
+    isBig = !isBig;
+    document.getElementById('demo').style.fontSize = isBig ? '35px' : '16px';
+}
+function toggleContent() {
+    isHello = !isHello;
+    document.getElementById('demo').innerHTML = isHello ? 'Hello JavaScript!' : 'JavaScript can change HTML content.';
+}
+</script>
+</body>
+</html>

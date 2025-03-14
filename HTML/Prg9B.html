@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Demonstrations</title>
+</head>
+<body>
+<h1>JavaScript String, Function, and Math Object Demonstrations</h1>
+<h2>String Object Demonstration</h2>
+<script>
+let str = "Oh! Hi Buddy!";
+let str2 = " How are you doing?";
+document.write("<p>Original String: " + str + "</p>");
+document.write("<p>Lowercase: " + str.toLowerCase() + "</p>");
+document.write("<p>Uppercase: " + str.toUpperCase() + "</p>");
+document.write("<p>Index of 'World': " + str.indexOf("World") + "</p>");
+document.write("<p>Last index of 'o': " + str.lastIndexOf("o") + "</p>");
+document.write("<p>Concatenated String: " + str.concat(str2) + "</p>");
+document.write("<p>Does the string include 'Hi'? " + str.includes("Hello") + "</p>");
+</script>
+<br>
+<h2>Function Demonstration</h2>
+<p id="output"></p>
+<button onclick="showDate()">Show Date</button>
+<button onclick="showTime()">Show Time</button>
+<button onclick="greet('John')">Greet</button>
+<button onclick="randomNumber()">Random Number</button>
+<script>
+function showDate() {
+  document.getElementById("output").innerText = new Date().toDateString();
+}
+function showTime() {
+  document.getElementById("output").innerText = new Date().toLocaleTimeString();
+}
+
+function greet(name) {
+  document.getElementById("output").innerText = "Hello, " + name + "!";
+}
+function randomNumber() {
+  document.getElementById("output").innerText = "Random: " + Math.floor(Math.random() * 100);
+}
+</script>
+<br>
+<br>
+<h2>Math Object Demonstration</h2>
+<script>
+document.write("<p>Math.round(4.7): " + Math.round(4.7) + "</p>");
+document.write("<p>Math.ceil(4.1): " + Math.ceil(4.1) + "</p>");
+document.write("<p>Math.floor(4.9): " + Math.floor(4.9) + "</p>");
+document.write("<p>Math.max(10, 20): " + Math.max(10, 20) + "</p>");
+document.write("<p>Math.min(10, 20): " + Math.min(10, 20) + "</p>");
+document.write("<p>Math.random(): " + Math.random() + "</p>");
+document.write("<p>Random between 1 and 10: " + Math.floor(Math.random() * 10 + 1) + "</p>");
+document.write("<p>Math.sin(0): " + Math.sin(0) + "</p>");
+document.write("<p>Math.tan(Math.PI / 4): " + Math.tan(Math.PI / 4) + "</p>");
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Canvas Circle Animation</title>
+</head>
+<body>
+<canvas id="c" width="200" height="200"></canvas>
+<br>
+<button onclick="startDrawing()">Start</button>
+<script>
+let ctx = document.getElementById("c").getContext("2d");
+let radius = 0; 
+let interval;
+function startDrawing() {
+clearInterval(interval); 
+radius = 0; 
+interval = setInterval(drawCircle, 30);  }
+function drawCircle() {
+ctx.clearRect(0, 0, 200, 200); 
+ctx.beginPath();
+ctx.arc(100, 100, radius, 0, 2 * Math.PI);
+ctx.stroke(); 
+radius += 2; 
+if (radius > 50) {
+clearInterval(interval);  }}
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>If-Else Ladder - Grade System</title>
+</head>
+<body>
+<h2>Grade Evaluation in JavaScript</h2>
+<label for="marks">Enter your marks: </label><input type="number" id="marks"><button onclick="checkGrade()">Check Grade</button>
+<h3 id="result"></h3>
+<script>
+function checkGrade() {
+let marks = Number(document.getElementById("marks").value);
+let resultText = "";
+if (isNaN(marks) || marks < 0 || marks > 100) resultText = "Invalid input! Please enter marks between 0 and 100.";
+else if (marks >= 90) resultText = "Grade: A (Excellent)";
+else if (marks >= 80) resultText = "Grade: B (Very Good)";
+else if (marks >= 70) resultText = "Grade: C (Good)";
+else if (marks >= 60) resultText = "Grade: D (Satisfactory)";
+else if (marks >= 50) resultText = "Grade: E (Needs Improvement)";
+else resultText = "Grade: F (Fail)";
+document.getElementById("result").textContent = resultText;
+console.log(resultText);
+}
+</script>
+
+<h3>Also check console to see output.</h3>
+</body>
+</html>
