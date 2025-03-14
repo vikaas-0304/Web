@@ -482,24 +482,78 @@ console.log(resultText);
 <head>
 <title>Student Form</title>
 <style>
-body{font-family:Arial;margin:20px;}form{max-width:400px;margin:auto;}.form-group{margin-bottom:15px;}label{display:block;margin-bottom:5px;font-weight:bold;}input,select{width:100%;padding:8px;}.error{color:red;font-size:0.9em;}button{background-color:green;color:white;}
+body { font-family: Arial; margin: 20px; } 
+form { max-width: 400px; margin: auto; } 
+.form-group { margin-bottom: 15px; } 
+label { display: block; margin-bottom: 5px; font-weight: bold; } 
+input, select { width: 100%; padding: 8px; } 
+.error { color: red; font-size: 0.9em; } 
+button { background-color: green; color: white; } 
 </style>
 </head>
 <body>
-<center><h2>Student Form</h2></center>
+<center>
+<h2>Student Form</h2>
+</center>
 <form id="studentForm" onsubmit="return handleSubmit(event)">
-<div class="form-group"><label>Name:</label><input type="text" id="name" required><span class="error" id="nameError"></span></div>
-<div class="form-group"><label>Age:</label><input type="number" id="age" min="1" max="100" required><span class="error" id="ageError"></span></div>
-<div class="form-group"><label>Course:</label><select id="course" required><option value="">Select a course</option><option>Web Programming</option><option>Power BI</option><option>Artificial Intelligence</option></select><span class="error" id="courseError"></span></div>
+<div class="form-group">
+<label>Name:</label>
+<input type="text" id="name" required>
+<span class="error" id="nameError"></span>
+</div>
+
+<div class="form-group">
+<label>Age:</label>
+<input type="number" id="age" min="1" max="100" required>
+<span class="error" id="ageError"></span>
+</div>
+
+<div class="form-group">
+<label>Course:</label>
+<select id="course" required>
+<option value="">Select a course</option>
+<option>Web Programming</option>
+<option>Power BI</option>
+<option>Artificial Intelligence</option>
+</select>
+<span class="error" id="courseError"></span>
+</div>
+
 <button type="submit">Submit</button>
 </form>
-<div id="output" style="display:none;"><h3>Submitted Details</h3><p>Name: <span id="outputName"></span></p><p>Age: <span id="outputAge"></span></p><p>Course: <span id="outputCourse"></span></p></div>
+
+<div id="output" style="display:none;">
+<h3>Submitted Details</h3>
+<p>Name: <span id="outputName"></span></p>
+<p>Age: <span id="outputAge"></span></p>
+<p>Course: <span id="outputCourse"></span></p>
+</div>
 <script>
-function handleSubmit(event){event.preventDefault();document.querySelectorAll('.error').forEach(e=>e.textContent="");let name=document.getElementById('name').value.trim(),age=document.getElementById('age').value,course=document.getElementById('course').value,isValid=true;if(!name){document.getElementById('nameError').textContent="Name is required.";isValid=false;}if(age<1||age>100){document.getElementById('ageError').textContent="Enter valid age.";isValid=false;}if(!course){document.getElementById('courseError').textContent="Select a course.";isValid=false;}if(isValid){document.getElementById('output').style.display="block";document.getElementById('outputName').textContent=name;document.getElementById('outputAge').textContent=age;document.getElementById('outputCourse').textContent=course;}}
+function handleSubmit(event) { 
+event.preventDefault(); 
+document.querySelectorAll('.error').forEach(e => e.textContent = ""); 
+let name = document.getElementById('name').value.trim(), 
+age = document.getElementById('age').value, 
+course = document.getElementById('course').value, 
+isValid = true; 
+if (!name) { 
+document.getElementById('nameError').textContent = "Name is required."; 
+isValid = false; } 
+if (age < 1 || age > 100) { 
+document.getElementById('ageError').textContent = "Enter valid age."; 
+isValid = false; } 
+if (!course) { 
+document.getElementById('courseError').textContent = "Select a course."; 
+isValid = false; } 
+if (isValid) { 
+document.getElementById('output').style.display = "block"; 
+document.getElementById('outputName').textContent = name; 
+document.getElementById('outputAge').textContent = age; 
+document.getElementById('outputCourse').textContent = course; 
+} }
 </script>
 </body>
 </html>
-
 
 
 
